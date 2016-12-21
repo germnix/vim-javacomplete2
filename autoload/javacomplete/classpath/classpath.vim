@@ -29,7 +29,7 @@ function! s:BuildClassPath(force)
     endif
   endif
 
-  let g:JavaComplete_LibsPath .= s:FindClassPath(a:force)
+  let g:JavaComplete_LibsPath .= '.' . SyntaxCheckers_java_javac_LoadClasspath()
 endfunction
 
 function! s:ReadClassPathFile(classpathFile)

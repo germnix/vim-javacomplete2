@@ -81,6 +81,8 @@ function! s:CheckServerAccordance(serverVersion)
 endfunction
 
 function! javacomplete#server#Start()
+  return
+
   if s:Poll() == 0 && s:serverStartBlocked == 0
     let serverAppVersion = s:GetServerAppVersion()
     if !s:CheckServerAccordance(serverAppVersion)
